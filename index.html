@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rinterio</title>
+
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/5bd8534bcc.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "btn-color": "#ABEF5F",
+            },
+            fontFamily: {
+              Manrope: "Manrope",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="max-w-full mx-auto bg-gray-100 font-Manrope">
+    <!--* header section -->
+    <header class="w-11/12 mx-auto bg-gray-100 mb-10 md:mb-20">
+      <!--* navbar -->
+      <nav class="">
+        <div class="navbar px-4">
+          <div class="navbar-start flex gap-3">
+            <i
+              class="fa-solid fa-arrow-right bg-btn-color rounded-full p-2 -rotate-45"
+            ></i>
+            <a class="text-2xl md:text-3xl font-bold text-[#212121]"
+              >Rinterio</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="flex items-center gap-5 px-1 text-[#737373]">
+              <li class="hover:text-[#494949] hover:font-semibold">
+                <a href="#">Home</a>
+              </li>
+              <li class="hover:text-[#494949] hover:font-semibold">
+                <a href="#">Services</a>
+              </li>
+              <li class="hover:text-[#494949] hover:font-semibold">
+                <a href="#">Portfolio</a>
+              </li>
+              <li class="hover:text-[#494949] hover:font-semibold">
+                <a href="#">Blogs</a>
+              </li>
+              <li class="hover:text-[#494949] hover:font-semibold">
+                <a href="#">About us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <div class="dropdown">
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0 space-y-2"
+              >
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">About us</a></li>
+              </ul>
+              <div
+                tabindex="0"
+                role="button"
+                class="bg-white rounded-full w-10 p-2 text-center lg:hidden"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </div>
+            </div>
+            <div class="md:flex items-center gap-3 hidden">
+              <i
+                class="fa-solid fa-magnifying-glass bg-white rounded-full p-2 text-[#737373]"
+              ></i>
+              <i
+                class="fa-solid fa-cart-shopping bg-white rounded-full p-2 text-[#737373]"
+              ></i>
+              <button
+                class="px-7 py-3 hidden md:flex items-center text-[#1C1C1C] font-extrabold text-xl bg-btn-color rounded-full"
+              >
+                Book Consult
+                <span
+                  ><i
+                    class="fa-solid fa-arrow-right bg-[#1C1C1C] text-white rounded-full w-9 text-center p-2 -rotate-45 ml-2"
+                  ></i
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--* banner -->
+      <div class="mt-12">
+        <div class="mb-6">
+          <img class="mx-auto" src="assets/banner.png" alt="banner" />
+        </div>
+        <div class="text-center pb-8">
+          <h1 class="font-extrabold text-3xl md:text-6xl mb-6 text-[#212121]">
+            A barn house of this design has a striking appearance
+          </h1>
+          <p class="font-medium text[#494949] mb-8">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication, featuring weathered wood, sleek metal <br />
+            accents, and large windows that flood the space with natural light.
+          </p>
+          <button
+            class="px-16 md:px-7 py-3 text-[#1C1C1C] font-extrabold text-xl bg-lime-200 rounded-full"
+          >
+            Book Consult
+            <span
+              ><i
+                class="fa-solid fa-arrow-right bg-btn-color text-black rounded-full w-9 text-center p-2 -rotate-45"
+              ></i
+            ></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!--* main section  -->
+    <main class="max-w-full mx-auto bg-gray-200">
+      <!--* About us section -->
+      <div class="hidden sm:block pt-5">
+        <img class="mx-5 mb-2" src="assets/Vector.png" alt="" />
+      </div>
+
+      <section class="w-11/12 mx-auto py-5 mb-10 md:mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 items-center">
+          <div>
+            <div class="text-center sm:text-left py-6 sm:py-0">
+              <button
+                class="bg-white px-4 py-2 rounded-full font-bold text-xl mb-4"
+              >
+                <i class="fa-solid fa-arrow-right"></i> About Us
+              </button>
+              <h2 class="text-4xl font-bold text-[#212121] mb-6">
+                We design thoughtful, liveable spaces
+              </h2>
+              <p class="font-medium text-[#494949] mb-6">
+                We design some wonderful house for our customer. They are very statisfied to our design and send me some good feedback. Their satisfaction made us to feel proud 
+              </p>
+            </div>
+            <div class="flex gap-3 bg-white rounded-2xl items-center mb-6">
+              <div class="px-5">
+                <img src="assets/commercial.png" alt="" />
+              </div>
+              <div class="py-5">
+                <h3 class="text-xl font-bold text-[#494949] mb-3">
+                  Commercial
+                </h3>
+                <p class="font-medium text-[#737373]">
+                  We design commercial project that is for our coustomer who need to build office or any business.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-3 bg-white rounded-2xl items-center mb-6">
+              <div class="px-5">
+                <img src="assets/residential.png" alt="" />
+              </div>
+              <div class="py-5">
+                <h3 class="text-xl font-bold text-[#494949] mb-3">
+                  Residential
+                </h3>
+                <p class="font-medium text-[#737373]">
+                  Residential house design are also made by us. We done a huge number of residential project.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="assets/Rectangle.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!--* rating section  -->
+      <section class="w-11/12 mx-auto py-5 mb-10 md:mb-20">
+        <div
+          class="bg-white rounded-3xl text-center grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4"
+        >
+          <div class="py-7">
+            <i class="fa-regular fa-message text-[#737373]"></i>
+            <h4 class="font-bold text-4xl text-[#494949] py-2">235+</h4>
+            <p class="font-medium text-[#737373]">Happy Client Review</p>
+          </div>
+          <div class="py-7">
+            <i class="fa-regular fa-building text-[#737373]"></i>
+            <h4 class="font-bold text-4xl text-[#494949] py-2">50+</h4>
+            <p class="font-medium text-[#737373]">Work Departments</p>
+          </div>
+          <div class="py-7">
+            <img src="assets/client.jpg" class="w-8 h-6 mx-auto" alt="" />
+            <h4 class="font-bold text-4xl text-[#494949] py-2">30k+</h4>
+            <p class="font-medium text-[#737373]">Our Happy Client</p>
+          </div>
+          <div class="py-7">
+            <img src="assets/staff.png" class="w-8 h-6 mx-auto" alt="" />
+            <h4 class="font-bold text-4xl text-[#494949] py-2">307+</h4>
+            <p class="font-medium text-[#737373]">Staff Members</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- * work process section -->
+      <section class="w-11/12 mx-auto mb-5 md:mb-20">
+        <div class="text-center py-6 sm:py-0">
+          <button
+            class="bg-white px-4 py-2 rounded-full font-bold text-xl mb-4"
+          >
+            <i class="fa-solid fa-arrow-right"></i> How we works
+          </button>
+          <h2 class="text-4xl font-bold text-[#212121] mb-6">
+            Our Works Process
+          </h2>
+          <p class="font-medium text-[#494949] mb-6">
+            We always work for our customers. Customer satisfaction is our main priority<br />
+            so we are always concern about our customer satisfaction
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 pb-5 md:pb-8"
+        >
+          <div class="card bg-[#E7C1D3] rounded-2xl mx-auto">
+            <div class="card-body">
+              <img class="w-12 h-12" src="assets/concept.png" alt="" />
+              <h2 class="card-title">Concept</h2>
+              <p>
+                The main concept of our design is what our customer need. We always focus on that.
+              </p>
+            </div>
+          </div>
+          <div class="card bg-[#EFDA6E] rounded-2xl mx-auto">
+            <div class="card-body">
+              <img class="w-12 h-12" src="assets/flow-chart.png" alt="" />
+              <h2 class="card-title">Design Process</h2>
+              <p>
+                After complete the meeting with our customer we started to design. Design are made by our Architect.
+              </p>
+            </div>
+          </div>
+          <div class="card bg-[#A4DAC3] rounded-2xl mx-auto">
+            <div class="card-body">
+              <img class="w-12 h-12" src="assets/vision.png" alt="" />
+              <h2 class="card-title">Supervision</h2>
+              <p>
+                Our vision is to make our customer happy. We will try our best to made them happy.
+              </p>
+            </div>
+          </div>
+          <div class="card bg-[#77AAEA] rounded-2xl mx-auto">
+            <div class="card-body">
+              <img class="w-12 h-12" src="assets/budget-planning.png" alt="" />
+              <h2 class="card-title">Budget Planning</h2>
+              <p>
+                It's depending on project. But we always try to set the minimum budget. But it is not possible everytime
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- * latest work section -->
+      <section class="max-w-full mx-auto mb-5 md:mb-10 md:bg-gray-100 ">
+        <div class="w-11/12 mx-auto py-10 md:py-20">
+          <div class="text-center py-6 sm:py-0">
+            <button
+              class="bg-lime-100 px-4 py-2 rounded-full font-bold text-xl mb-4"
+            >
+              <i class="fa-solid fa-arrow-right"></i> Explore our Latest works
+            </button>
+            <h2 class="text-4xl font-bold text-[#212121] mb-6">
+              Our Latest Portfolio
+            </h2>
+            <p class="font-medium text-[#494949] mb-6">
+              These are some leatest project made by us and we deliverd to our customer and <br />
+              they are very happy about the project.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-12">
+            <div
+              class="flex flex-col gap-4 md:flex-row rounded-xl items-center bg-base-100 shadow-xl md:col-span-8 order-1"
+            >
+              <div class="w-full">
+                <img src="assets/img1.png" alt="Album" class="w-full p-4" />
+              </div>
+              <div class="text-left p-4">
+                <h2 class="card-title font-bold text-2xl text-[#494949]">
+                  Commercial
+                </h2>
+                <p class="text-[#737373] font-medium text-justify mb-3">
+                  This commercial project was made by us very recently. This design made our customer very statisfied. They give us a very good feedback about this design
+                </p>
+                <div class="card-actions">
+                  <a class="text-xl md:text-2xl font-bold text-[#212121]"
+                    >View Details</a
+                  >
+                  <i
+                    class="fa-solid fa-arrow-right bg-btn-color w-8 rounded-full -rotate-45 p-2"
+                  ></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card md:card-side bg-base-100 shadow-xl md:col-span-4 order-2"
+            >
+              <figure class="mx-auto w-full">
+                <img src="assets/img2.png" alt="Album" class="w-full p-4" />
+              </figure>
+            </div>
+
+            <div
+              class="card md:card-side bg-base-100 shadow-xl md:col-span-3 order-5 md:order-3"
+            >
+              <figure class="mx-auto w-full">
+                <img src="assets/img3.png" alt="Album" class="w-full p-4" />
+              </figure>
+            </div>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 rounded-xl gap-4 items-center bg-base-100 shadow-xl md:col-span-6 order-4"
+            >
+              <div class="w-full">
+                <img src="assets/img4.png" alt="" class="w-full p-4" />
+              </div>
+              <div class="text-left p-4">
+                <h2 class="card-title font-bold text-2xl text-[#494949]">
+                  Commercial
+                </h2>
+                <p class="text-[#737373] font-medium text-justify mb-3">
+                  This is also a design we made very recently. This customer is also very pleased to us.
+                </p>
+                <div class="card-actions">
+                  <a class="text-xl md:text-2xl font-bold text-[#212121]"
+                    >View Details</a
+                  >
+                  <i
+                    class="fa-solid fa-arrow-right bg-btn-color w-8 rounded-full -rotate-45 p-2"
+                  ></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card md:card-side bg-base-100 shadow-xl md:col-span-3 order-3 md:order-5"
+            >
+              <figure class="mx-auto w-full">
+                <img src="assets/img5.png" alt="Album" class="w-full p-4" />
+              </figure>
+            </div>
+            <div
+              class="card md:card-side bg-base-100 shadow-xl md:col-span-3 order-6 md:hidden"
+            >
+              <figure class="mx-auto w-full">
+                <img src="assets/img5.png" alt="Album" class="w-full p-4" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- * news section -->
+
+      </div>
+      <section class="w-11/12 mx-auto mb-2 md:mb-2 ">
+        <div>
+          <div class="text-center py-6 sm:py-8">
+            <button
+              class="bg-lime-100 px-4 py-2 rounded-full font-bold text-xl mb-4"
+            >
+              <i class="fa-solid fa-arrow-right"></i> Rinterio News
+            </button>
+            <h2 class="text-4xl font-bold text-[#212121] mb-6">
+              Read Our Articles and News
+            </h2>
+            <p class="font-medium text-[#494949] mb-6">
+              The barn house captivates with its blend of rustic charm and
+              modern sophistication, <br />
+              featuring weathered wood, sleek metal accents.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-3 pb-20">
+          <div class="card glass mx-auto">
+            <figure>
+              <img src="assets/article1.png" alt="car!" class="py-5 px-3" />
+            </figure>
+            <div class="ml-6">
+              <div class="flex gap-3 mb-3">
+                <h4 class="">July14, 2024</h4>
+                <h4>By Admin</h4>
+              </div>
+              <h2 class="text-xl font-bold">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="font-medium my-3">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <div class="card-actions pb-3">
+                <button class="font-bold text-xl">Read More</button>
+                <i
+                  class="fa-solid fa-arrow-right bg-btn-color w-8 rounded-full -rotate-45 p-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="card glass mx-auto">
+            <figure>
+              <img src="assets/article2.png" alt="car!" class="py-5 px-3" />
+            </figure>
+            <div class="ml-6">
+              <div class="flex gap-3 mb-3">
+                <h4 class="">July14, 2024</h4>
+                <h4>By Admin</h4>
+              </div>
+              <h2 class="text-xl font-bold">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="font-medium my-3">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <div class="card-actions pb-3">
+                <button class="font-bold text-xl">Read More</button>
+                <i
+                  class="fa-solid fa-arrow-right bg-btn-color w-8 rounded-full -rotate-45 p-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div class="card glass mx-auto">
+            <figure>
+              <img src="assets/article3.png" alt="car!" class="py-5 px-3" />
+            </figure>
+            <div class="ml-6">
+              <div class="flex gap-3 mb-3">
+                <h4 class="">July14, 2024</h4>
+                <h4>By Admin</h4>
+              </div>
+              <h2 class="text-xl font-bold">
+                How to choose the furniture right of your home.
+              </h2>
+              <p class="font-medium my-3">
+                The barn house captivates with its blend of rustic charm and
+                modern.
+              </p>
+              <div class="card-actions pb-3">
+                <button class="font-bold text-xl">Read More</button>
+                <i
+                  class="fa-solid fa-arrow-right bg-btn-color w-8 rounded-full -rotate-45 p-2"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class=" border-b-4 border-white">
+
+      </div>
+
+      <!-- * challenge section -->
+      <section class="w-11/12 mx-auto mb-16">
+        <div class="text-center py-6 sm:py-16 hidden md:block">
+          <h2 class="text-4xl font-bold text-[#212121] mb-6">
+            If You Have Any Question Asked Us
+          </h2>
+          <p class="font-medium text-[#494949] mb-6">
+            If you have any question about us then feel free to asked us<br />
+            We are always ready to take your questions.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 items-center">
+          <div class="order-2 md:order-1 space-y-4">
+            <div class="collapse collapse-arrow bg-base-200">
+              <input type="radio" name="my-accordion-2" checked="checked" />
+              <div class="collapse-title text-xl font-medium">
+                Can we meet in your office any time?
+              </div>
+              <div class="collapse-content">
+                <p>Yes you can meet with us in our office time</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+              <input type="radio" name="my-accordion-2" />
+              <div class="collapse-title text-xl font-medium">
+                How can we fixed a meeting to discuss?
+              </div>
+              <div class="collapse-content">
+                <p>knock us and told about project then fixed meeting</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+              <input type="radio" name="my-accordion-2" />
+              <div class="collapse-title text-xl font-medium">
+                How much time need to complete the project?
+              </div>
+              <div class="collapse-content">
+                <p>It will take around 7 days</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+              <input type="radio" name="my-accordion-2" />
+              <div class="collapse-title text-xl font-medium">
+                What is minimum budget for a project?
+              </div>
+              <div class="collapse-content">
+                <p>We are started from 30k</p>
+              </div>
+            </div>
+            <button class=" btn bg-btn-color border-none"> Asked More</button>
+          </div>
+          <div class="order-1 md:order-2 py-5">
+            <img src="assets/faq.png" alt="" class="mx-auto" />
+          </div>
+        </div>
+      </section>
+      <div class=" border-b-4 border-white">
+
+      </div>
+
+      <!-- * lets connect section -->
+      <section
+        class="bg-[url('assets/bg.jpg')] bg-no-repeat bg-cover bg-center max-w-full mb-4"
+      >
+        <div class="w-11/12 mx-auto py-16">
+          <div class="text-center py-6 sm:py-8">
+            <button
+              class="bg-lime-100 px-4 py-2 rounded-full font-bold text-xl mb-4"
+            >
+              <i class="fa-solid fa-arrow-right"></i> Let’s Connect
+            </button>
+            <h2 class="text-4xl font-bold text-[#212121] mb-6">
+              Let’s Discuss Next Project
+            </h2>
+            <p class="font-medium text-[#494949] mb-6">
+              If you are agreed to work with us then knocked us for a meeting<br />
+              We are always ready to work with you.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-2 md:px-24">
+            <div class="">
+              <input
+                type="text"
+                placeholder="First Name*"
+                class="input input-bordered w-full py-8 px-10 rounded-full"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Last Name*"
+                class="input input-bordered w-full py-8 px-10 rounded-full"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Phone Number*"
+                class="input input-bordered w-full py-8 px-10 rounded-full"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Email Number*"
+                class="input input-bordered w-full py-8 px-10 rounded-full"
+              />
+            </div>
+          </div>
+          <div class="md:px-24 py-8">
+            <textarea
+              name="massage"
+              id=""
+              rows="10"
+              cols="50"
+              class="w-full text-[#A0A0A0] py-3 rounded-3xl"
+            >
+            Write your message here</textarea
+            >
+          </div>
+          <div class="text-center md:px-24">
+            <button
+              class="px-7 py-3 text-[#1C1C1C] font-extrabold text-xl bg-btn-color rounded-full w-full"
+            >
+              Send Mail
+              <i
+                class="fa-solid fa-arrow-right bg-[#1C1C1C] text-white rounded-full w-9 p-2 -rotate-45 mx-2"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- * footer section -->
+    <footer class="max-w-full mx-auto bg-[#1C1C1C]">
+      <div class="w-11/12 mx-auto">
+        <div class="py-20">
+          <div class="flex gap-3 justify-center pb-5">
+            <i
+              class="fa-solid fa-arrow-right bg-btn-color rounded-full my-auto p-2 -rotate-45"
+            ></i>
+            <a class="text-2xl md:text-3xl text-white font-bold">Rinterio</a>
+          </div>
+          <p class="text-[#737373] text-center pb-4">
+            If you find any difficulties to connect with us. Then send us email with you data<br />
+            Our team will fixed your problem or connect with you.
+          </p>
+
+          <div class="flex md:py-5 justify-center">
+            <ul
+              class="flex flex-col items-center gap-7 md:gap-20 md:flex-row px-1 text-[#E9E9E9]"
+            >
+              <li class="hover:text-[#494949] hover:font-semibold">
+                <a href="#">Home</a>
+              </li>
+              <li class="hover:text-[#494949] hover:font-semibold">
+                <a href="#">Services</a>
+              </li>
+              <li class="hover:text-[#494949] hover:font-semibold">
+                <a href="#">Portfolio</a>
+              </li>
+              <li class="hover:text-[#494949] hover:font-semibold">
+                <a href="#">Blogs</a>
+              </li>
+              <li class="hover:text-[#494949] hover:font-semibold">
+                <a href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center mt-5">
+            <button
+              class=" py-3 text-[#1C1C1C] font-extrabold text-xl bg-btn-color rounded-full w-full md:w-64"
+            >
+              Send Mail
+              <i
+                class="fa-solid fa-arrow-right bg-[#1C1C1C] text-white rounded-full w-9 text-center p-2 -rotate-45 mx-2"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
